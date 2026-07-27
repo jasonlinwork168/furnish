@@ -44,8 +44,11 @@
         .dim-text { position: absolute; background: white; padding: 2px 6px; border-radius: 4px; font-size: 12px; font-weight: bold; box-shadow: 0 1px 3px rgba(0,0,0,0.2); z-index: 25; pointer-events: auto; border: 1px solid #d1d5db; cursor: pointer; transform-origin: center center; }
         
         table { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 6px; font-size: 14px; margin-bottom: 40px; }
-        th, td { border: 1px solid #e5e7eb; padding: 12px; text-align: left; }
+        th, td { border: 1px solid #e5e7eb; padding: 12px; text-align: center; }
         th { background: #f9fafb; font-weight: bold; }
+        /* 強制狀態與區域不換行 */
+        th:nth-child(2), td:nth-child(2) { white-space: nowrap; }
+        th:nth-child(3), td:nth-child(3) { white-space: nowrap; }
         
         .hl-row td { background-color: #f4f4f4 !important; transition: background-color 0.3s; }
         .clickable-num { cursor: pointer; color: #2563eb; font-weight: bold; text-decoration: underline; }
@@ -70,12 +73,12 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="18" stroke="#333" stroke-width="2"/><line x1="15" y1="6" x2="15" y2="18" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[1] 雙插座 (接地)</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 玄關<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: 1. 離左柱 30
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 離左柱 30
                         </div>
                     </div><div class="dim-text dim-group-m_1785075094641-text" data-id="m_1785075094641" style="left:1290.6391650099404px; top:33.49370098682805px; color:#ef4444; transform: translate(-50%, -50%) rotate(1.3019526725788637deg);">30</div>
                     <div class="marker " id="m-m_1785075255513" data-id="m_1785075255513" style="left:1499.748508946322px; top:309.1378361756949px;">
@@ -83,11 +86,11 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="18" stroke="#333" stroke-width="2"/><line x1="15" y1="6" x2="15" y2="18" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[2] 雙插座 (接地)</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 玄關<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
+                            高度: 33.5<br>
+                            迴路: <br>
                             備註: 1. 離左牆 50
 2. 玄關櫃、鞋櫃
                         </div>
@@ -97,12 +100,12 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="18" stroke="#333" stroke-width="2"/><line x1="15" y1="6" x2="15" y2="18" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[3] 雙插座 (接地)</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 玄關<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: 1. 離左牆 140
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 離左牆 140
                         </div>
                     </div><div class="dim-text dim-group-m_1785075412109-text" data-id="m_1785075412109" style="left:1472.5914512922463px; top:352.5891284222157px; color:#ef4444; transform: translate(-50%, -50%) rotate(0.4212849041686073deg);">140</div>
                     <div class="marker existing" id="m-m_1785076758153" data-id="m_1785076758153" style="left:1373.4681908548707px; top:34.851553869531834px;">
@@ -113,8 +116,8 @@
                             狀態: 既有<br>
                             區域: 玄關<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: -<br>
-                            迴路: -<br>
+                            高度: <br>
+                            迴路: <br>
                             備註: 玄關、客廳
                         </div>
                     </div>
@@ -126,9 +129,9 @@
                             狀態: 既有<br>
                             區域: 客廳<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: -<br>
-                            迴路: -<br>
-                            備註: -
+                            高度: <br>
+                            迴路: <br>
+                            備註: 
                         </div>
                     </div>
                     <div class="marker " id="m-m_1785075709084" data-id="m_1785075709084" style="left:1272.9870775347913px; top:576.634854068339px;">
@@ -136,12 +139,12 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="18" stroke="#333" stroke-width="2"/><line x1="15" y1="6" x2="15" y2="18" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[6] 雙插座 (接地)</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 客廳<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: 1. 離左牆 15
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 離左牆 15
                         </div>
                     </div><div class="dim-text dim-group-m_1785075709084-text" data-id="m_1785075709084" style="left:1290.6391650099404px; top:603.7919117224145px; color:#ef4444; transform: translate(-50%, -50%) rotate(-2.726310993906331deg);">15</div>
                     <div class="marker " id="m-m_1785075788122" data-id="m_1785075788122" style="left:1162.2437010073484px; top:580.6237206307974px;">
@@ -149,12 +152,12 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="6" y1="9" x2="18" y2="9" stroke="#333" stroke-width="2"/><line x1="6" y1="15" x2="18" y2="15" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[7] 專用單插 (冷氣)</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 客廳<br>
                             電壓/線徑: 220V / 5.5 mm²<br>
-                            高度: 220 cm<br>
-                            迴路: -<br>
-                            備註: 1. 離左梁 9
+                            高度: 220<br>
+                            迴路: <br>
+                            備註: 離左梁 9
                         </div>
                     </div><div class="dim-text dim-group-m_1785075788122-text" data-id="m_1785075788122" style="left:1170.6123339497603px; top:541.1715939022835px; color:#ef4444; transform: translate(-50%, -50%) rotate(0deg);">9</div>
                     <div class="marker existing" id="m-m_1785076139067" data-id="m_1785076139067" style="left:983.7644135188867px; top:586.1398242472654px;">
@@ -165,8 +168,8 @@
                             狀態: 既有<br>
                             區域: 客廳<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: -<br>
-                            迴路: -<br>
+                            高度: <br>
+                            迴路: <br>
                             備註: 客廳
                         </div>
                     </div>
@@ -178,9 +181,9 @@
                             狀態: 既有<br>
                             區域: 客廳<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: -
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 
                         </div>
                     </div>
                     <div class="marker existing" id="m-m_1785077036852" data-id="m_1785077036852" style="left:613.9757979830976px; top:233.09807474428334px;">
@@ -191,9 +194,9 @@
                             狀態: 既有<br>
                             區域: 客廳<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: -
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 
                         </div>
                     </div>
                     <div class="marker existing" id="m-m_1785080263406" data-id="m_1785080263406" style="left:680.9632206759443px; top:38.925112517643164px;">
@@ -203,10 +206,10 @@
                             <b>[11] 電話插座</b><br>
                             狀態: 既有<br>
                             區域: 客廳<br>
-                            電壓/線徑: - / 電話線<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: -
+                            電壓/線徑: 電話線<br>
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 
                         </div>
                     </div>
                     <div class="marker " id="m-m_1785134003773" data-id="m_1785134003773" style="left:882.8306687584454px; top:38.925112517643164px;">
@@ -214,12 +217,12 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><polygon points="12,21 3,5 21,5" fill="white" stroke="#ea580c" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[12] 網路孔</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 客廳<br>
-                            電壓/線徑: - / 電話線<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: -
+                            電壓/線徑: 電話線<br>
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 
                         </div>
                     </div><div class="dim-text dim-group-m_1785134003773-text" data-id="m_1785134003773" style="left:918.1348437087437px; top:131.2591085415px; color:#ef4444; transform: translate(-50%, -50%) rotate(0deg);">161.5</div>
                     <div class="marker " id="m-m_1785133675404" data-id="m_1785133675404" style="left:611.2600922176899px; top:402.8296850822555px;">
@@ -227,12 +230,12 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="18" stroke="#333" stroke-width="2"/><line x1="15" y1="6" x2="15" y2="18" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[13] 雙插座 (接地)</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 客廳<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: 1. 離左牆邊緣 65
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 離左牆邊緣 65
                         </div>
                     </div><div class="dim-text dim-group-m_1785133675404-text" data-id="m_1785133675404" style="left:669.6477661739524px; top:439.4917129152575px; color:#ef4444; transform: translate(-50%, -50%) rotate(90deg);">65</div>
                     <div class="marker " id="m-m_1785133797426" data-id="m_1785133797426" style="left:611.2600922176899px; top:466.648770569333px;">
@@ -240,12 +243,12 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="18" stroke="#333" stroke-width="2"/><line x1="15" y1="6" x2="15" y2="18" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[14] 雙插座 (接地)</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 客廳<br>
                             電壓/線徑: 110V / 5.5 mm²<br>
-                            高度: 123.5 cm<br>
-                            迴路: -<br>
-                            備註: 1. 離左牆邊緣 30
+                            高度: 123.5<br>
+                            迴路: <br>
+                            備註: 離左牆邊緣 30
                         </div>
                     </div><div class="dim-text dim-group-m_1785133797426-text" data-id="m_1785133797426" style="left:651.9956786988033px; top:485.6587109271859px; color:#ef4444; transform: translate(-50%, -50%) rotate(90deg);">30</div>
                     <div class="marker " id="m-m_1785133984249" data-id="m_1785133984249" style="left:1102.8028357564574px; top:37.56725963493939px;">
@@ -253,11 +256,11 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="18" stroke="#333" stroke-width="2"/><line x1="15" y1="6" x2="15" y2="18" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[15] 雙插座 (接地)</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 客廳<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 76.5 cm<br>
-                            迴路: -<br>
+                            高度: 76.5<br>
+                            迴路: <br>
                             備註: 1. 離右柱 55
 2. 電視牆面
                         </div>
@@ -267,11 +270,11 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="18" stroke="#333" stroke-width="2"/><line x1="15" y1="6" x2="15" y2="18" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[16] 雙插座 (接地)</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 客廳<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 52 cm<br>
-                            迴路: -<br>
+                            高度: 52<br>
+                            迴路: <br>
                             備註: 1. 離右柱 88
 2. 電視牆面
                         </div>
@@ -281,11 +284,11 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="18" stroke="#333" stroke-width="2"/><line x1="15" y1="6" x2="15" y2="18" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[17] 雙插座 (接地)</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 客廳<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
+                            高度: 33.5<br>
+                            迴路: <br>
                             備註: 1. 離右柱 120.5
 2. 電視牆面
                         </div>
@@ -295,12 +298,12 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><polygon points="12,21 3,5 21,5" fill="white" stroke="#ea580c" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[18] 網路線出線 ( 埋入式雙聯接線盒 )</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 客廳<br>
-                            電壓/線徑: - / 網路線<br>
-                            高度: 36 cm<br>
-                            迴路: -<br>
-                            備註: 1. 上緣跟左側的電話插座齊平
+                            電壓/線徑: 網路線<br>
+                            高度: 36<br>
+                            迴路: <br>
+                            備註: 上緣跟左側的電話插座齊平
                         </div>
                     </div><div class="dim-text dim-group-m_1785134000119-text" data-id="m_1785134000119" style="left:945.2919013628192px; top:100.02849223931312px; color:#ef4444; transform: translate(-50%, -50%) rotate(0.3113870402748276deg);">145.5</div>
                     <div class="marker existing" id="m-m_1785077133269" data-id="m_1785077133269" style="left:604.9234592445329px; top:754.5135817025339px;">
@@ -311,8 +314,8 @@
                             狀態: 既有<br>
                             區域: 廚房<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: -<br>
-                            迴路: -<br>
+                            高度: <br>
+                            迴路: <br>
                             備註: 走道、廚房、陽台
                         </div>
                     </div>
@@ -324,8 +327,8 @@
                             狀態: 既有<br>
                             區域: 廚房<br>
                             電壓/線徑: 110V / 5.5 mm²<br>
-                            高度: -<br>
-                            迴路: -<br>
+                            高度: <br>
+                            迴路: <br>
                             備註: 1. 改用 5.5mm²
 2. 電器櫃預留
                         </div>
@@ -335,14 +338,14 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="18" stroke="#333" stroke-width="2"/><line x1="15" y1="6" x2="15" y2="18" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[21] 雙插座 (接地)</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 廚房<br>
                             電壓/線徑: 110V / 5.5 mm²<br>
-                            高度: 140 cm<br>
-                            迴路: -<br>
+                            高度: 140<br>
+                            迴路: <br>
                             備註: 1. 原插座離地高度改為 140、離左牆 115.3。
 2. 廚房檯面插座
-2. 改用 5.5mm²。
+3. 改用 5.5mm²。
                         </div>
                     </div><div class="dim-text dim-group-m_1785079980338-text" data-id="m_1785079980338" style="left:340.3684421182864px; top:506.0265041677426px; color:#ef4444; transform: translate(-50%, -50%) rotate(0deg);">115.3</div>
                     <div class="marker existing" id="m-m_1785134905766" data-id="m_1785134905766" style="left:308.4588993747476px; top:504.6686512850388px;">
@@ -353,9 +356,9 @@
                             狀態: 既有<br>
                             區域: 廚房<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: -<br>
-                            迴路: -<br>
-                            備註: 1. 排油煙機
+                            高度: <br>
+                            迴路: <br>
+                            備註: 排油煙機
                         </div>
                     </div>
                     <div class="marker " id="m-m_1785135140416" data-id="m_1785135140416" style="left:564.7667520029694px; top:504.52196550322003px;">
@@ -363,11 +366,11 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="18" stroke="#333" stroke-width="2"/><line x1="15" y1="6" x2="15" y2="18" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[23] 雙插座 (接地)</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 廚房<br>
                             電壓/線徑: 110V / 5.5 mm²<br>
-                            高度: 52 cm<br>
-                            迴路: -<br>
+                            高度: 52<br>
+                            迴路: <br>
                             備註: 1. 離右牆邊緣 17
 2. 洗碗機+淨水器
                         </div>
@@ -377,11 +380,11 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="18" stroke="#333" stroke-width="2"/><line x1="15" y1="6" x2="15" y2="18" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[24] 雙插座 (接地)</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 廚房<br>
                             電壓/線徑: 110V / 5.5 mm²<br>
-                            高度: 42 cm<br>
-                            迴路: -<br>
+                            高度: 42<br>
+                            迴路: <br>
                             備註: 1. 離右牆邊緣 17
 2. 電器櫃或瞬熱飲水機預留
                         </div>
@@ -391,11 +394,11 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="18" stroke="#333" stroke-width="2"/><line x1="15" y1="6" x2="15" y2="18" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[25] 雙插座 (接地)</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 廚房<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: -<br>
-                            迴路: -<br>
+                            高度: <br>
+                            迴路: <br>
                             備註: 1. 離右牆 40。高度與左側舊有插座齊平
 2. 電器櫃預留
                         </div>
@@ -408,8 +411,8 @@
                             狀態: 既有<br>
                             區域: 浴室<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: -<br>
-                            迴路: -<br>
+                            高度: <br>
+                            迴路: <br>
                             備註: 浴室
                         </div>
                     </div>
@@ -418,11 +421,11 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="6" y1="9" x2="18" y2="9" stroke="#333" stroke-width="2"/><line x1="6" y1="15" x2="18" y2="15" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[27] 單聯埋入式出線盒</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 浴室<br>
                             電壓/線徑: 220V / 5.5 mm²<br>
-                            高度: -<br>
-                            迴路: -<br>
+                            高度: <br>
+                            迴路: <br>
                             備註: 1. 天花板
 2. 暖風機
                         </div>
@@ -432,11 +435,11 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="18" stroke="#333" stroke-width="2"/><line x1="15" y1="6" x2="15" y2="18" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[28] 雙插座 (接地)</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 浴室<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
+                            高度: 33.5<br>
+                            迴路: <br>
                             備註: 1. 離右牆 10
 2. 瞬熱式免治馬桶座
                         </div>
@@ -446,11 +449,11 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="18" stroke="#333" stroke-width="2"/><line x1="15" y1="6" x2="15" y2="18" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[29] 雙插座 (接地)</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 浴室<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 113 cm<br>
-                            迴路: -<br>
+                            高度: 113<br>
+                            迴路: <br>
                             備註: 1. 離右牆 43
 2. 吹風機
                         </div>
@@ -463,8 +466,8 @@
                             狀態: 既有<br>
                             區域: 陽台<br>
                             電壓/線徑: 110V / 5.5 mm²<br>
-                            高度: -<br>
-                            迴路: -<br>
+                            高度: <br>
+                            迴路: <br>
                             備註: 改用 5.5mm²
                         </div>
                     </div>
@@ -476,9 +479,9 @@
                             狀態: 既有<br>
                             區域: 陽台<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: -<br>
-                            迴路: -<br>
-                            備註: -
+                            高度: <br>
+                            迴路: <br>
+                            備註: 
                         </div>
                     </div>
                     <div class="marker existing" id="m-m_1785077141433" data-id="m_1785077141433" style="left:604.9234592445329px; top:784.3863451220169px;">
@@ -489,8 +492,8 @@
                             狀態: 既有<br>
                             區域: 主臥<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: -<br>
-                            迴路: -<br>
+                            高度: <br>
+                            迴路: <br>
                             備註: 主臥
                         </div>
                     </div>
@@ -502,9 +505,9 @@
                             狀態: 既有<br>
                             區域: 主臥<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: -
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 
                         </div>
                     </div>
                     <div class="marker existing" id="m-m_1785077265793" data-id="m_1785077265793" style="left:179.9155069582505px; top:895.7302815037267px;">
@@ -515,9 +518,9 @@
                             狀態: 既有<br>
                             區域: 主臥<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: -
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 
                         </div>
                     </div>
                     <div class="marker " id="m-m_1785130720575" data-id="m_1785130720575" style="left:328.8266926153043px; top:1328.8853562660292px;">
@@ -525,12 +528,12 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="18" stroke="#333" stroke-width="2"/><line x1="15" y1="6" x2="15" y2="18" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[35] 雙插座 (接地)</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 主臥<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: 1. 離右牆 45
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 離右牆 45
 
                         </div>
                     </div><div class="dim-text dim-group-m_1785130720575-text" data-id="m_1785130720575" style="left:305.74319360934004px; top:1350.6110023892898px; color:#ef4444; transform: translate(-50%, -50%) rotate(1.1934894239820721deg);">45</div>
@@ -542,9 +545,9 @@
                             狀態: 既有<br>
                             區域: 主臥<br>
                             電壓/線徑: 220V / 5.5 mm²<br>
-                            高度: -<br>
-                            迴路: -<br>
-                            備註: -
+                            高度: <br>
+                            迴路: <br>
+                            備註: 
                         </div>
                     </div>
                     <div class="marker " id="m-m_1785130810961" data-id="m_1785130810961" style="left:711.7412055377695px; top:1324.811797617918px;">
@@ -552,12 +555,12 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><polygon points="12,21 3,5 21,5" fill="white" stroke="#ea580c" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[37] 網路孔</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 主臥<br>
-                            電壓/線徑: - / 網路線<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: 1. 離左牆 60
+                            電壓/線徑: 網路線<br>
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 離左牆 60
                         </div>
                     </div><div class="dim-text dim-group-m_1785130810961-text" data-id="m_1785130810961" style="left:738.898263191845px; top:1346.5374437411783px; color:#ef4444; transform: translate(-50%, -50%) rotate(0deg);">60</div>
                     <div class="marker " id="m-m_1785131188585" data-id="m_1785131188585" style="left:388.57221945427045px; top:783.0284922393131px;">
@@ -565,12 +568,12 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="18" stroke="#333" stroke-width="2"/><line x1="15" y1="6" x2="15" y2="18" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[38] 雙插座 (接地)</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 主臥<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: 1. 離左牆 110
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 離左牆 110
                         </div>
                     </div><div class="dim-text dim-group-m_1785131188585-text" data-id="m_1785131188585" style="left:329.50561905665614px; top:783.0284922393131px; color:#ef4444; transform: translate(-50%, -50%) rotate(0deg);">110</div>
                     <div class="marker " id="m-m_1785131295197" data-id="m_1785131295197" style="left:779.6338496729584px; top:1034.231275539512px;">
@@ -578,12 +581,12 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="18" stroke="#333" stroke-width="2"/><line x1="15" y1="6" x2="15" y2="18" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[39] 雙插座 (接地)</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 主臥<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: 1. 離右牆 165
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 離右牆 165
                         </div>
                     </div><div class="dim-text dim-group-m_1785131295197-text" data-id="m_1785131295197" style="left:779.6338496729584px; top:1096.6925081438858px; color:#ef4444; transform: translate(-50%, -50%) rotate(90deg);">165</div>
                     <div class="marker existing" id="m-m_1785130199451" data-id="m_1785130199451" style="left:575.9559172673918px; top:197.7938997939851px;">
@@ -594,9 +597,9 @@
                             狀態: 既有<br>
                             區域: 次臥<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: -<br>
-                            迴路: -<br>
-                            備註: -
+                            高度: <br>
+                            迴路: <br>
+                            備註: 
                         </div>
                     </div>
                     <div class="marker " id="m-m_1785080401369" data-id="m_1785080401369" style="left:255.95526838966202px; top:41.64081828305072px;">
@@ -604,12 +607,12 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><polygon points="12,21 3,5 21,5" fill="white" stroke="#ea580c" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[41] 網路孔</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 次臥<br>
-                            電壓/線徑: - / 網路線<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: 1. 離左牆 140
+                            電壓/線徑: 網路線<br>
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 離左牆 140
                         </div>
                     </div><div class="dim-text dim-group-m_1785080401369-text" data-id="m_1785080401369" style="left:189.70850653653835px; top:86.44996341227537px; color:#ef4444; transform: translate(-50%, -50%) rotate(0deg);">140</div>
                     <div class="marker existing" id="m-m_1785077046060" data-id="m_1785077046060" style="left:575.9559172673918px; top:233.09807474428334px;">
@@ -620,9 +623,9 @@
                             狀態: 既有<br>
                             區域: 次臥<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: -
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 
                         </div>
                     </div>
                     <div class="marker existing" id="m-m_1785077082050" data-id="m_1785077082050" style="left:469.13817097415506px; top:36.20940675223561px;">
@@ -633,9 +636,9 @@
                             狀態: 既有<br>
                             區域: 次臥<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: -
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 
                         </div>
                     </div>
                     <div class="marker existing" id="m-m_1785077108224" data-id="m_1785077108224" style="left:65.8558648111332px; top:38.925112517643164px;">
@@ -646,9 +649,9 @@
                             狀態: 既有<br>
                             區域: 次臥<br>
                             電壓/線徑: 220V / 5.5 mm²<br>
-                            高度: -<br>
-                            迴路: -<br>
-                            備註: -
+                            高度: <br>
+                            迴路: <br>
+                            備註: 
                         </div>
                     </div>
                     <div class="marker " id="m-m_1785129999160" data-id="m_1785129999160" style="left:231.06128506063231px; top:477.51159363096326px;">
@@ -656,12 +659,12 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="18" stroke="#333" stroke-width="2"/><line x1="15" y1="6" x2="15" y2="18" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[45] 雙插座 (接地)</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 次臥<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: 1. 離右牆 120
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 離右牆 120
                         </div>
                     </div><div class="dim-text dim-group-m_1785129999160-text" data-id="m_1785129999160" style="left:141.442994802183px; top:469.3644763347406px; color:#ef4444; transform: translate(-50%, -50%) rotate(0deg);">120</div>
                     <div class="marker existing" id="m-m_1785080212420" data-id="m_1785080212420" style="left:500.36878727634195px; top:36.20940675223561px;">
@@ -671,10 +674,10 @@
                             <b>[46] 電話插座</b><br>
                             狀態: 既有<br>
                             區域: 次臥<br>
-                            電壓/線徑: - / 電話線<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: -
+                            電壓/線徑: 電話線<br>
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 
                         </div>
                     </div>
                     <div class="marker " id="m-m_1785080321818" data-id="m_1785080321818" style="left:232.87176938369782px; top:41.64081828305072px;">
@@ -682,12 +685,12 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="18" stroke="#333" stroke-width="2"/><line x1="15" y1="6" x2="15" y2="18" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[47] 雙插座 (接地)</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 次臥<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: 1. 離左牆 120
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 離左牆 120
                         </div>
                     </div><div class="dim-text dim-group-m_1785080321818-text" data-id="m_1785080321818" style="left:122.88568588469185px; top:26.70443657330917px; color:#ef4444; transform: translate(-50%, -50%) rotate(0deg);">120</div>
                     <div class="marker existing" id="m-m_1785077285419" data-id="m_1785077285419" style="left:1244.472166998012px; top:941.8972795156551px;">
@@ -698,9 +701,9 @@
                             狀態: 既有<br>
                             區域: 兒童房<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: -
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 
                         </div>
                     </div>
                     <div class="marker existing" id="m-m_1785077305355" data-id="m_1785077305355" style="left:1107.3290258449304px; top:1328.8853510862316px;">
@@ -711,9 +714,9 @@
                             狀態: 既有<br>
                             區域: 兒童房<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: 1. 吹風機+電腦
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 吹風機+電腦
                         </div>
                     </div>
                     <div class="marker " id="m-m_1785131386026" data-id="m_1785131386026" style="left:809.5066130924414px; top:1034.231275539512px;">
@@ -721,12 +724,12 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="18" stroke="#333" stroke-width="2"/><line x1="15" y1="6" x2="15" y2="18" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[50] 雙插座 (接地)</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 兒童房<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: 1. 離左牆 165
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 離左牆 165
                         </div>
                     </div><div class="dim-text dim-group-m_1785131386026-text" data-id="m_1785131386026" style="left:809.5066130092779px; top:1095.8369107475633px; color:#ef4444; transform: translate(-50%, -50%) rotate(-89.73474365662403deg);">165</div>
                     <div class="marker existing" id="m-m_1785077353773" data-id="m_1785077353773" style="left:1241.7564612326044px; top:1145.5752119212218px;">
@@ -737,9 +740,9 @@
                             狀態: 既有<br>
                             區域: 兒童房<br>
                             電壓/線徑: 220V / 5.5 mm²<br>
-                            高度: -<br>
-                            迴路: -<br>
-                            備註: -
+                            高度: <br>
+                            迴路: <br>
+                            備註: 
                         </div>
                     </div>
                     <div class="marker existing" id="m-m_1785077154241" data-id="m_1785077154241" style="left:934.8817097415507px; top:797.9648739490547px;">
@@ -750,8 +753,8 @@
                             狀態: 既有<br>
                             區域: 兒童房<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: -<br>
-                            迴路: -<br>
+                            高度: <br>
+                            迴路: <br>
                             備註: 兒童房
                         </div>
                     </div>
@@ -760,12 +763,12 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><polygon points="12,21 3,5 21,5" fill="white" stroke="#ea580c" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[53] 網路孔</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 兒童房<br>
-                            電壓/線徑: - / 網路線<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: 1. 離左插座 22
+                            電壓/線徑: 網路線<br>
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 離左插座 22
                         </div>
                     </div><div class="dim-text dim-group-m_1785131466884-text" data-id="m_1785131466884" style="left:1223.6517423170935px; top:960.907219873508px; color:#ef4444; transform: translate(-50%, -50%) rotate(-90deg);">22</div>
                     <div class="marker " id="m-m_1785131544214" data-id="m_1785131544214" style="left:1037.6258973866761px; top:871.2889296150587px;">
@@ -773,12 +776,12 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="white" stroke="#333" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="18" stroke="#333" stroke-width="2"/><line x1="15" y1="6" x2="15" y2="18" stroke="#333" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[54] 雙插座 (接地)</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 兒童房<br>
                             電壓/線徑: 110V / 2.0 mm<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: 1. 離右牆 137
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 離右牆 137
                         </div>
                     </div><div class="dim-text dim-group-m_1785131544214-text" data-id="m_1785131544214" style="left:1140.8227164721632px; top:871.2889296150587px; color:#ef4444; transform: translate(-50%, -50%) rotate(0deg);">137</div>
                     <div class="marker existing" id="m-m_1785134840331" data-id="m_1785134840331" style="left:1078.3614838677893px; top:1330.2432039689354px;">
@@ -788,10 +791,10 @@
                             <b>[55] 網路孔</b><br>
                             狀態: 既有<br>
                             區域: 兒童房<br>
-                            電壓/線徑: - / 電話線<br>
-                            高度: 33.5 cm<br>
-                            迴路: -<br>
-                            備註: -
+                            電壓/線徑: 電話線<br>
+                            高度: 33.5<br>
+                            迴路: <br>
+                            備註: 
                         </div>
                     </div>
                     <div class="marker text-marker" id="m-m_1785143817243" data-id="m_1785143817243" style="left:1310.7191801496492px; top:726.5477335904351px; width:261px; height:432px; font-size:20px;">
@@ -806,11 +809,11 @@
                         <svg class="icon-symbol" viewBox="0 0 24 24"><path d="M12 21c-4.42 0-8-3.58-8-8 0-4.63 7-10.74 7.5-11.16.29-.24.71-.24 1 0 .5.42 7.5 6.53 7.5 11.16 0 4.42-3.58 8-8 8z" fill="white" stroke="#0ea5e9" stroke-width="2"/></svg>
                         <div class="tooltip">
                             <b>[56] 冷熱出水</b><br>
-                            狀態: 新設<br>
+                            狀態: +新設<br>
                             區域: 廚房<br>
-                            電壓/線徑: -<br>
-                            高度: 40 cm<br>
-                            迴路: -<br>
+                            電壓/線徑: <br>
+                            高度: 40<br>
+                            迴路: <br>
                             備註: 1. 冷熱水管之間的中心點離右牆邊緣大約 45 ( 冷熱水管中心管距約 12cm )。
 2. 原檯面上出水改至檯面下。
                         </div>
@@ -823,576 +826,688 @@
         <tbody>
                 <tr id="row-m_1785075094641">
                     <td class="clickable-num" data-id="m_1785075094641" title="點擊在圖面上定位">1</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>玄關</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>33.5 cm</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>33.5</td>
                     <td>30</td>
-                    <td>-</td><td>1. 離左柱 30</td>
+                    <td></td>
+                    <td style="text-align: left;">離左柱 30</td>
                 </tr>
             
                 <tr id="row-m_1785075255513">
                     <td class="clickable-num" data-id="m_1785075255513" title="點擊在圖面上定位">2</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>玄關</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>33.5 cm</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>33.5</td>
                     <td>50</td>
-                    <td>-</td><td>1. 離左牆 50
+                    <td></td>
+                    <td style="text-align: left;">1. 離左牆 50
 2. 玄關櫃、鞋櫃</td>
                 </tr>
             
                 <tr id="row-m_1785075412109">
                     <td class="clickable-num" data-id="m_1785075412109" title="點擊在圖面上定位">3</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>玄關</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>33.5 cm</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>33.5</td>
                     <td>140</td>
-                    <td>-</td><td>1. 離左牆 140</td>
+                    <td></td>
+                    <td style="text-align: left;">離左牆 140</td>
                 </tr>
             
                 <tr id="row-m_1785076758153">
                     <td class="clickable-num" data-id="m_1785076758153" title="點擊在圖面上定位">4</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>玄關</td>
-                    <td>開關 ( 2開 )</td><td>110V / 2.0 mm</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td><td>玄關、客廳</td>
+                    <td>開關 ( 2開 )</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;">玄關、客廳</td>
                 </tr>
             
                 <tr id="row-m_1785075526550">
                     <td class="clickable-num" data-id="m_1785075526550" title="點擊在圖面上定位">5</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>客廳</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td><td>-</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;"></td>
                 </tr>
             
                 <tr id="row-m_1785075709084">
                     <td class="clickable-num" data-id="m_1785075709084" title="點擊在圖面上定位">6</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>客廳</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>33.5 cm</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>33.5</td>
                     <td>15</td>
-                    <td>-</td><td>1. 離左牆 15</td>
+                    <td></td>
+                    <td style="text-align: left;">離左牆 15</td>
                 </tr>
             
                 <tr id="row-m_1785075788122">
                     <td class="clickable-num" data-id="m_1785075788122" title="點擊在圖面上定位">7</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>客廳</td>
-                    <td>專用單插 (冷氣)</td><td>220V / 5.5 mm²</td>
-                    <td>220 cm</td>
+                    <td>專用單插 (冷氣)</td>
+                    <td>220V /<br>5.5 mm²</td>
+                    <td>220</td>
                     <td>9</td>
-                    <td>-</td><td>1. 離左梁 9</td>
+                    <td></td>
+                    <td style="text-align: left;">離左梁 9</td>
                 </tr>
             
                 <tr id="row-m_1785076139067">
                     <td class="clickable-num" data-id="m_1785076139067" title="點擊在圖面上定位">8</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>客廳</td>
-                    <td>開關 ( 一開+接地單插座。WTDFP4308 )</td><td>110V / 2.0 mm</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td><td>客廳</td>
+                    <td>開關 ( 一開+接地單插座。WTDFP4308 )</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;">客廳</td>
                 </tr>
             
                 <tr id="row-m_1785077011584">
                     <td class="clickable-num" data-id="m_1785077011584" title="點擊在圖面上定位">9</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>客廳</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>33.5 cm</td>
-                    <td>-</td>
-                    <td>-</td><td>-</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>33.5</td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;"></td>
                 </tr>
             
                 <tr id="row-m_1785077036852">
                     <td class="clickable-num" data-id="m_1785077036852" title="點擊在圖面上定位">10</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>客廳</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>33.5 cm</td>
-                    <td>-</td>
-                    <td>-</td><td>-</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>33.5</td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;"></td>
                 </tr>
             
                 <tr id="row-m_1785080263406">
                     <td class="clickable-num" data-id="m_1785080263406" title="點擊在圖面上定位">11</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>客廳</td>
-                    <td>電話插座</td><td>- / 電話線</td>
-                    <td>33.5 cm</td>
-                    <td>-</td>
-                    <td>-</td><td>-</td>
+                    <td>電話插座</td>
+                    <td>電話線</td>
+                    <td>33.5</td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;"></td>
                 </tr>
             
                 <tr id="row-m_1785134003773">
                     <td class="clickable-num" data-id="m_1785134003773" title="點擊在圖面上定位">12</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>客廳</td>
-                    <td>網路孔</td><td>- / 電話線</td>
-                    <td>33.5 cm</td>
+                    <td>網路孔</td>
+                    <td>電話線</td>
+                    <td>33.5</td>
                     <td>161.5</td>
-                    <td>-</td><td>-</td>
+                    <td></td>
+                    <td style="text-align: left;"></td>
                 </tr>
             
                 <tr id="row-m_1785133675404">
                     <td class="clickable-num" data-id="m_1785133675404" title="點擊在圖面上定位">13</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>客廳</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>33.5 cm</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>33.5</td>
                     <td>65</td>
-                    <td>-</td><td>1. 離左牆邊緣 65</td>
+                    <td></td>
+                    <td style="text-align: left;">離左牆邊緣 65</td>
                 </tr>
             
                 <tr id="row-m_1785133797426">
                     <td class="clickable-num" data-id="m_1785133797426" title="點擊在圖面上定位">14</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>客廳</td>
-                    <td>雙插座 (接地)</td><td>110V / 5.5 mm²</td>
-                    <td>123.5 cm</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>5.5 mm²</td>
+                    <td>123.5</td>
                     <td>30</td>
-                    <td>-</td><td>1. 離左牆邊緣 30</td>
+                    <td></td>
+                    <td style="text-align: left;">離左牆邊緣 30</td>
                 </tr>
             
                 <tr id="row-m_1785133984249">
                     <td class="clickable-num" data-id="m_1785133984249" title="點擊在圖面上定位">15</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>客廳</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>76.5 cm</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>76.5</td>
                     <td>55</td>
-                    <td>-</td><td>1. 離右柱 55
+                    <td></td>
+                    <td style="text-align: left;">1. 離右柱 55
 2. 電視牆面</td>
                 </tr>
             
                 <tr id="row-m_1785133990103">
                     <td class="clickable-num" data-id="m_1785133990103" title="點擊在圖面上定位">16</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>客廳</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>52 cm</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>52</td>
                     <td>88</td>
-                    <td>-</td><td>1. 離右柱 88
+                    <td></td>
+                    <td style="text-align: left;">1. 離右柱 88
 2. 電視牆面</td>
                 </tr>
             
                 <tr id="row-m_1785133992919">
                     <td class="clickable-num" data-id="m_1785133992919" title="點擊在圖面上定位">17</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>客廳</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>33.5 cm</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>33.5</td>
                     <td>120.5</td>
-                    <td>-</td><td>1. 離右柱 120.5
+                    <td></td>
+                    <td style="text-align: left;">1. 離右柱 120.5
 2. 電視牆面</td>
                 </tr>
             
                 <tr id="row-m_1785134000119">
                     <td class="clickable-num" data-id="m_1785134000119" title="點擊在圖面上定位">18</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>客廳</td>
-                    <td>網路線出線 ( 埋入式雙聯接線盒 )</td><td>- / 網路線</td>
-                    <td>36 cm</td>
+                    <td>網路線出線 ( 埋入式雙聯接線盒 )</td>
+                    <td>網路線</td>
+                    <td>36</td>
                     <td>145.5</td>
-                    <td>-</td><td>1. 上緣跟左側的電話插座齊平</td>
+                    <td></td>
+                    <td style="text-align: left;">上緣跟左側的電話插座齊平</td>
                 </tr>
             
                 <tr id="row-m_1785077133269">
                     <td class="clickable-num" data-id="m_1785077133269" title="點擊在圖面上定位">19</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>廚房</td>
-                    <td>開關 ( 三開 )</td><td>110V / 2.0 mm</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td><td>走道、廚房、陽台</td>
+                    <td>開關 ( 三開 )</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;">走道、廚房、陽台</td>
                 </tr>
             
                 <tr id="row-m_1785079929012">
                     <td class="clickable-num" data-id="m_1785079929012" title="點擊在圖面上定位">20</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>廚房</td>
-                    <td>雙插座 (接地)</td><td>110V / 5.5 mm²</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td><td>1. 改用 5.5mm²
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>5.5 mm²</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;">1. 改用 5.5mm²
 2. 電器櫃預留</td>
                 </tr>
             
                 <tr id="row-m_1785079980338">
                     <td class="clickable-num" data-id="m_1785079980338" title="點擊在圖面上定位">21</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>廚房</td>
-                    <td>雙插座 (接地)</td><td>110V / 5.5 mm²</td>
-                    <td>140 cm</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>5.5 mm²</td>
+                    <td>140</td>
                     <td>115.3</td>
-                    <td>-</td><td>1. 原插座離地高度改為 140、離左牆 115.3。
+                    <td></td>
+                    <td style="text-align: left;">1. 原插座離地高度改為 140、離左牆 115.3。
 2. 廚房檯面插座
-2. 改用 5.5mm²。</td>
+3. 改用 5.5mm²。</td>
                 </tr>
             
                 <tr id="row-m_1785134905766">
                     <td class="clickable-num" data-id="m_1785134905766" title="點擊在圖面上定位">22</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>廚房</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td><td>1. 排油煙機</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;">排油煙機</td>
                 </tr>
             
                 <tr id="row-m_1785135140416">
                     <td class="clickable-num" data-id="m_1785135140416" title="點擊在圖面上定位">23</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>廚房</td>
-                    <td>雙插座 (接地)</td><td>110V / 5.5 mm²</td>
-                    <td>52 cm</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>5.5 mm²</td>
+                    <td>52</td>
                     <td>17</td>
-                    <td>-</td><td>1. 離右牆邊緣 17
+                    <td></td>
+                    <td style="text-align: left;">1. 離右牆邊緣 17
 2. 洗碗機+淨水器</td>
                 </tr>
             
                 <tr id="row-m_1785135122642">
                     <td class="clickable-num" data-id="m_1785135122642" title="點擊在圖面上定位">24</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>廚房</td>
-                    <td>雙插座 (接地)</td><td>110V / 5.5 mm²</td>
-                    <td>42 cm</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>5.5 mm²</td>
+                    <td>42</td>
                     <td>17</td>
-                    <td>-</td><td>1. 離右牆邊緣 17
+                    <td></td>
+                    <td style="text-align: left;">1. 離右牆邊緣 17
 2. 電器櫃或瞬熱飲水機預留</td>
                 </tr>
             
                 <tr id="row-m_1785136998382">
                     <td class="clickable-num" data-id="m_1785136998382" title="點擊在圖面上定位">25</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>廚房</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>-</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td></td>
                     <td>40</td>
-                    <td>-</td><td>1. 離右牆 40。高度與左側舊有插座齊平
+                    <td></td>
+                    <td style="text-align: left;">1. 離右牆 40。高度與左側舊有插座齊平
 2. 電器櫃預留</td>
                 </tr>
             
                 <tr id="row-m_1785077147592">
                     <td class="clickable-num" data-id="m_1785077147592" title="點擊在圖面上定位">26</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>浴室</td>
-                    <td>開關 ( 一開 )</td><td>110V / 2.0 mm</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td><td>浴室</td>
+                    <td>開關 ( 一開 )</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;">浴室</td>
                 </tr>
             
                 <tr id="row-m_1785079491997">
                     <td class="clickable-num" data-id="m_1785079491997" title="點擊在圖面上定位">27</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>浴室</td>
-                    <td>單聯埋入式出線盒</td><td>220V / 5.5 mm²</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td><td>1. 天花板
+                    <td>單聯埋入式出線盒</td>
+                    <td>220V /<br>5.5 mm²</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;">1. 天花板
 2. 暖風機</td>
                 </tr>
             
                 <tr id="row-m_1785131826966">
                     <td class="clickable-num" data-id="m_1785131826966" title="點擊在圖面上定位">28</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>浴室</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>33.5 cm</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>33.5</td>
                     <td>10</td>
-                    <td>-</td><td>1. 離右牆 10
+                    <td></td>
+                    <td style="text-align: left;">1. 離右牆 10
 2. 瞬熱式免治馬桶座</td>
                 </tr>
             
                 <tr id="row-m_1785077169781">
                     <td class="clickable-num" data-id="m_1785077169781" title="點擊在圖面上定位">29</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>浴室</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>113 cm</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>113</td>
                     <td>43</td>
-                    <td>-</td><td>1. 離右牆 43
+                    <td></td>
+                    <td style="text-align: left;">1. 離右牆 43
 2. 吹風機</td>
                 </tr>
             
                 <tr id="row-m_1785077241093">
                     <td class="clickable-num" data-id="m_1785077241093" title="點擊在圖面上定位">30</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>陽台</td>
-                    <td>雙插座 (接地) ( 洗脫烘、熱水器 )</td><td>110V / 5.5 mm²</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td><td>改用 5.5mm²</td>
+                    <td>雙插座 (接地) ( 洗脫烘、熱水器 )</td>
+                    <td>110V /<br>5.5 mm²</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;">改用 5.5mm²</td>
                 </tr>
             
                 <tr id="row-m_1785077182497">
                     <td class="clickable-num" data-id="m_1785077182497" title="點擊在圖面上定位">31</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>陽台</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td><td>-</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;"></td>
                 </tr>
             
                 <tr id="row-m_1785077141433">
                     <td class="clickable-num" data-id="m_1785077141433" title="點擊在圖面上定位">32</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>主臥</td>
-                    <td>開關 ( 一開+接地單插座。WTDFP4308 )</td><td>110V / 2.0 mm</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td><td>主臥</td>
+                    <td>開關 ( 一開+接地單插座。WTDFP4308 )</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;">主臥</td>
                 </tr>
             
                 <tr id="row-m_1785077254155">
                     <td class="clickable-num" data-id="m_1785077254155" title="點擊在圖面上定位">33</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>主臥</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>33.5 cm</td>
-                    <td>-</td>
-                    <td>-</td><td>-</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>33.5</td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;"></td>
                 </tr>
             
                 <tr id="row-m_1785077265793">
                     <td class="clickable-num" data-id="m_1785077265793" title="點擊在圖面上定位">34</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>主臥</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>33.5 cm</td>
-                    <td>-</td>
-                    <td>-</td><td>-</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>33.5</td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;"></td>
                 </tr>
             
                 <tr id="row-m_1785130720575">
                     <td class="clickable-num" data-id="m_1785130720575" title="點擊在圖面上定位">35</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>主臥</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>33.5 cm</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>33.5</td>
                     <td>45</td>
-                    <td>-</td><td>1. 離右牆 45
+                    <td></td>
+                    <td style="text-align: left;">離右牆 45
 </td>
                 </tr>
             
                 <tr id="row-m_1785077380017">
                     <td class="clickable-num" data-id="m_1785077380017" title="點擊在圖面上定位">36</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>主臥</td>
-                    <td>專用單插 (冷氣)</td><td>220V / 5.5 mm²</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td><td>-</td>
+                    <td>專用單插 (冷氣)</td>
+                    <td>220V /<br>5.5 mm²</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;"></td>
                 </tr>
             
                 <tr id="row-m_1785130810961">
                     <td class="clickable-num" data-id="m_1785130810961" title="點擊在圖面上定位">37</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>主臥</td>
-                    <td>網路孔</td><td>- / 網路線</td>
-                    <td>33.5 cm</td>
+                    <td>網路孔</td>
+                    <td>網路線</td>
+                    <td>33.5</td>
                     <td>60</td>
-                    <td>-</td><td>1. 離左牆 60</td>
+                    <td></td>
+                    <td style="text-align: left;">離左牆 60</td>
                 </tr>
             
                 <tr id="row-m_1785131188585">
                     <td class="clickable-num" data-id="m_1785131188585" title="點擊在圖面上定位">38</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>主臥</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>33.5 cm</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>33.5</td>
                     <td>110</td>
-                    <td>-</td><td>1. 離左牆 110</td>
+                    <td></td>
+                    <td style="text-align: left;">離左牆 110</td>
                 </tr>
             
                 <tr id="row-m_1785131295197">
                     <td class="clickable-num" data-id="m_1785131295197" title="點擊在圖面上定位">39</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>主臥</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>33.5 cm</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>33.5</td>
                     <td>165</td>
-                    <td>-</td><td>1. 離右牆 165</td>
+                    <td></td>
+                    <td style="text-align: left;">離右牆 165</td>
                 </tr>
             
                 <tr id="row-m_1785130199451">
                     <td class="clickable-num" data-id="m_1785130199451" title="點擊在圖面上定位">40</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>次臥</td>
-                    <td>開關 ( 一開+接地單插座。WTDFP4308 ) ( 次臥 )</td><td>110V / 2.0 mm</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td><td>-</td>
+                    <td>開關 ( 一開+接地單插座。WTDFP4308 ) ( 次臥 )</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;"></td>
                 </tr>
             
                 <tr id="row-m_1785080401369">
                     <td class="clickable-num" data-id="m_1785080401369" title="點擊在圖面上定位">41</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>次臥</td>
-                    <td>網路孔</td><td>- / 網路線</td>
-                    <td>33.5 cm</td>
+                    <td>網路孔</td>
+                    <td>網路線</td>
+                    <td>33.5</td>
                     <td>140</td>
-                    <td>-</td><td>1. 離左牆 140</td>
+                    <td></td>
+                    <td style="text-align: left;">離左牆 140</td>
                 </tr>
             
                 <tr id="row-m_1785077046060">
                     <td class="clickable-num" data-id="m_1785077046060" title="點擊在圖面上定位">42</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>次臥</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>33.5 cm</td>
-                    <td>-</td>
-                    <td>-</td><td>-</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>33.5</td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;"></td>
                 </tr>
             
                 <tr id="row-m_1785077082050">
                     <td class="clickable-num" data-id="m_1785077082050" title="點擊在圖面上定位">43</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>次臥</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>33.5 cm</td>
-                    <td>-</td>
-                    <td>-</td><td>-</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>33.5</td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;"></td>
                 </tr>
             
                 <tr id="row-m_1785077108224">
                     <td class="clickable-num" data-id="m_1785077108224" title="點擊在圖面上定位">44</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>次臥</td>
-                    <td>專用單插 (冷氣)</td><td>220V / 5.5 mm²</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td><td>-</td>
+                    <td>專用單插 (冷氣)</td>
+                    <td>220V /<br>5.5 mm²</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;"></td>
                 </tr>
             
                 <tr id="row-m_1785129999160">
                     <td class="clickable-num" data-id="m_1785129999160" title="點擊在圖面上定位">45</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>次臥</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>33.5 cm</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>33.5</td>
                     <td>120</td>
-                    <td>-</td><td>1. 離右牆 120</td>
+                    <td></td>
+                    <td style="text-align: left;">離右牆 120</td>
                 </tr>
             
                 <tr id="row-m_1785080212420">
                     <td class="clickable-num" data-id="m_1785080212420" title="點擊在圖面上定位">46</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>次臥</td>
-                    <td>電話插座</td><td>- / 電話線</td>
-                    <td>33.5 cm</td>
-                    <td>-</td>
-                    <td>-</td><td>-</td>
+                    <td>電話插座</td>
+                    <td>電話線</td>
+                    <td>33.5</td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;"></td>
                 </tr>
             
                 <tr id="row-m_1785080321818">
                     <td class="clickable-num" data-id="m_1785080321818" title="點擊在圖面上定位">47</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>次臥</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>33.5 cm</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>33.5</td>
                     <td>120</td>
-                    <td>-</td><td>1. 離左牆 120</td>
+                    <td></td>
+                    <td style="text-align: left;">離左牆 120</td>
                 </tr>
             
                 <tr id="row-m_1785077285419">
                     <td class="clickable-num" data-id="m_1785077285419" title="點擊在圖面上定位">48</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>兒童房</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>33.5 cm</td>
-                    <td>-</td>
-                    <td>-</td><td>-</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>33.5</td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;"></td>
                 </tr>
             
                 <tr id="row-m_1785077305355">
                     <td class="clickable-num" data-id="m_1785077305355" title="點擊在圖面上定位">49</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>兒童房</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>33.5 cm</td>
-                    <td>-</td>
-                    <td>-</td><td>1. 吹風機+電腦</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>33.5</td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;">吹風機+電腦</td>
                 </tr>
             
                 <tr id="row-m_1785131386026">
                     <td class="clickable-num" data-id="m_1785131386026" title="點擊在圖面上定位">50</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>兒童房</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>33.5 cm</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>33.5</td>
                     <td>165</td>
-                    <td>-</td><td>1. 離左牆 165</td>
+                    <td></td>
+                    <td style="text-align: left;">離左牆 165</td>
                 </tr>
             
                 <tr id="row-m_1785077353773">
                     <td class="clickable-num" data-id="m_1785077353773" title="點擊在圖面上定位">51</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>兒童房</td>
-                    <td>專用單插 (冷氣)</td><td>220V / 5.5 mm²</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td><td>-</td>
+                    <td>專用單插 (冷氣)</td>
+                    <td>220V /<br>5.5 mm²</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;"></td>
                 </tr>
             
                 <tr id="row-m_1785077154241">
                     <td class="clickable-num" data-id="m_1785077154241" title="點擊在圖面上定位">52</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>兒童房</td>
-                    <td>開關 ( 一開+接地單插座。WTDFP4308 )</td><td>110V / 2.0 mm</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td><td>兒童房</td>
+                    <td>開關 ( 一開+接地單插座。WTDFP4308 )</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;">兒童房</td>
                 </tr>
             
                 <tr id="row-m_1785131466884">
                     <td class="clickable-num" data-id="m_1785131466884" title="點擊在圖面上定位">53</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>兒童房</td>
-                    <td>網路孔</td><td>- / 網路線</td>
-                    <td>33.5 cm</td>
+                    <td>網路孔</td>
+                    <td>網路線</td>
+                    <td>33.5</td>
                     <td>22</td>
-                    <td>-</td><td>1. 離左插座 22</td>
+                    <td></td>
+                    <td style="text-align: left;">離左插座 22</td>
                 </tr>
             
                 <tr id="row-m_1785131544214">
                     <td class="clickable-num" data-id="m_1785131544214" title="點擊在圖面上定位">54</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>兒童房</td>
-                    <td>雙插座 (接地)</td><td>110V / 2.0 mm</td>
-                    <td>33.5 cm</td>
+                    <td>雙插座 (接地)</td>
+                    <td>110V /<br>2.0 mm</td>
+                    <td>33.5</td>
                     <td>137</td>
-                    <td>-</td><td>1. 離右牆 137</td>
+                    <td></td>
+                    <td style="text-align: left;">離右牆 137</td>
                 </tr>
             
                 <tr id="row-m_1785134840331">
                     <td class="clickable-num" data-id="m_1785134840331" title="點擊在圖面上定位">55</td>
-                    <td>🧱 既有</td>
+                    <td>既有</td>
                     <td>兒童房</td>
-                    <td>網路孔</td><td>- / 電話線</td>
-                    <td>33.5 cm</td>
-                    <td>-</td>
-                    <td>-</td><td>-</td>
+                    <td>網路孔</td>
+                    <td>電話線</td>
+                    <td>33.5</td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left;"></td>
                 </tr>
             
                 <tr id="row-m_1785162916717">
                     <td class="clickable-num" data-id="m_1785162916717" title="點擊在圖面上定位">56</td>
-                    <td>🆕 新設</td>
+                    <td>+新設</td>
                     <td>廚房</td>
-                    <td>冷熱出水</td><td>-</td>
-                    <td>40 cm</td>
+                    <td>冷熱出水</td>
+                    <td></td>
+                    <td>40</td>
                     <td>45</td>
-                    <td>-</td><td>1. 冷熱水管之間的中心點離右牆邊緣大約 45 ( 冷熱水管中心管距約 12cm )。
+                    <td></td>
+                    <td style="text-align: left;">1. 冷熱水管之間的中心點離右牆邊緣大約 45 ( 冷熱水管中心管距約 12cm )。
 2. 原檯面上出水改至檯面下。</td>
                 </tr>
             </tbody>
