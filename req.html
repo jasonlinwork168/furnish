@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-TW" class="scroll-smooth">
+<html lang="zh-TW" class="scroll-smooth" id="html-root">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,37 +52,11 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #94a3b8;
         }
-
-        /* Attachment Link Highlight Style */
-        .attachment-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.25rem;
-            padding: 0.15rem 0.55rem;
-            margin: 0 0.25rem;
-            background-color: #eef2ff;
-            color: #4f46e5;
-            font-weight: 700;
-            font-size: 0.8125rem;
-            border-radius: 0.375rem;
-            border: 1px solid #c7d2fe;
-            text-decoration: none !important;
-            transition: all 0.2s ease-in-out;
-            vertical-align: middle;
-            box-shadow: 0 1px 2px rgba(79, 70, 229, 0.08);
-        }
-        .attachment-link:hover {
-            background-color: #4f46e5;
-            color: #ffffff !important;
-            border-color: #4338ca;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.25);
-        }
     </style>
 </head>
 <body class="bg-slate-100 text-slate-800 min-h-screen antialiased selection:bg-indigo-500 selection:text-white">
 
-    <header class="no-print sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md text-white border-b border-slate-800 px-4 py-3 shadow-md">
+    <header class="no-print bg-slate-900 text-white border-b border-slate-800 px-4 py-3 shadow-md">
         <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-between gap-3">
             <div class="flex items-center space-x-3">
                 <div class="w-9 h-9 rounded-lg bg-indigo-600 flex items-center justify-center text-white shadow font-bold text-lg">
@@ -90,11 +64,25 @@
                 </div>
                 <div>
                     <h1 class="font-bold text-base md:text-lg leading-tight">19坪老屋翻修需求說明書</h1>
-                    <p class="text-xs text-slate-400">台中 32年電梯大樓 • 100% 原文完整版</p>
+                    <p class="text-xs text-slate-400">台中 32年電梯大樓</p>
                 </div>
             </div>
             
             <div class="flex items-center space-x-2">
+                <!-- 字體縮放控制區 -->
+                <div class="flex items-center bg-slate-800 border border-slate-700 rounded-lg p-0.5 space-x-1 text-xs">
+                    <span class="text-slate-400 text-[11px] px-1.5 font-medium hidden sm:inline">字體</span>
+                    <button onclick="changeFontSize(-1)" title="縮小字體" class="w-7 h-7 flex items-center justify-center rounded hover:bg-slate-700 text-slate-200 transition active:scale-95">
+                        <i class="fa-solid fa-minus text-[10px]"></i>
+                    </button>
+                    <button onclick="resetFontSize()" id="font-size-btn" title="重設字體大小" class="px-1.5 h-7 flex items-center justify-center rounded hover:bg-slate-700 text-indigo-300 transition text-[11px] font-bold">
+                        100%
+                    </button>
+                    <button onclick="changeFontSize(1)" title="放大字體" class="w-7 h-7 flex items-center justify-center rounded hover:bg-slate-700 text-slate-200 transition active:scale-95">
+                        <i class="fa-solid fa-plus text-[10px]"></i>
+                    </button>
+                </div>
+
                 <button onclick="window.print()" class="px-3.5 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold transition flex items-center space-x-1.5 shadow">
                     <i class="fa-solid fa-print"></i>
                     <span>列印 / 另存 PDF</span>
@@ -118,7 +106,7 @@
                 <p class="text-xs text-slate-500 font-medium">( 最後更新： 2026/08/03 21:42 )</p>
             </div>
 
-            <!-- Spatial Overview Data Cards -->
+            <!-- Spatial Overview Data Cards (Kept exactly as in user's req.html) -->
             <div class="mt-6">
                 <h2 class="text-sm font-bold text-slate-800 uppercase tracking-wider mb-3 flex items-center">
                     <i class="fa-solid fa-house-ruler mr-2 text-indigo-600"></i> 空間概況
@@ -132,10 +120,10 @@
                         <div class="text-base font-bold text-slate-800 mt-0.5">1.01 坪</div>
                         <div class="text-[10px] text-slate-400">3.35 m²</div>
                     </div>
-                    <div class="bg-indigo-50/50 p-3 rounded-xl border border-indigo-100 text-center">
-                        <div class="text-xs text-indigo-600 font-bold">客廳</div>
-                        <div class="text-base font-bold text-indigo-950 mt-0.5">5.41 坪</div>
-                        <div class="text-[10px] text-indigo-400">17.88 m²</div>
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-center">
+						<div class="text-xs text-slate-500 font-medium">客廳</div>
+                        <div class="text-base font-bold text-slate-800 mt-0.5">5.41 坪</div>
+                        <div class="text-[10px] text-slate-400">17.88 m²</div>
                     </div>
                     <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-center">
                         <div class="text-xs text-slate-500 font-medium">主臥</div>
@@ -157,10 +145,10 @@
                         <div class="text-base font-bold text-slate-800 mt-0.5">0.76 坪</div>
                         <div class="text-[10px] text-slate-400">2.52 m²</div>
                     </div>
-                    <div class="bg-indigo-50/50 p-3 rounded-xl border border-indigo-100 text-center">
-                        <div class="text-xs text-indigo-600 font-bold">廚房</div>
-                        <div class="text-base font-bold text-indigo-950 mt-0.5">1.10 坪</div>
-                        <div class="text-[10px] text-indigo-400">3.64 m²</div>
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-center">
+						<div class="text-xs text-slate-500 font-medium">廚房</div>
+                        <div class="text-base font-bold text-slate-800 mt-0.5">1.10 坪</div>
+                        <div class="text-[10px] text-slate-400">3.64 m²</div>
                     </div>
                     <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-center">
                         <div class="text-xs text-slate-500 font-medium">陽台</div>
@@ -221,31 +209,35 @@
                 </h2>
             </div>
 
-            <!-- 1. 大樓保護工程 -->
+            <!-- 1. 大樓保護工程 (Standardized list indentation) -->
             <div class="space-y-2">
                 <h3 class="text-base font-bold text-slate-800 flex items-center">
                     <span class="w-6 h-6 rounded-full bg-indigo-600 text-white text-xs flex items-center justify-center mr-2 shrink-0">1</span>
                     大樓保護工程
                 </h3>
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/70 text-xs sm:text-sm text-slate-700 leading-relaxed space-y-1.5">
-                    <p>• 電梯車廂內部包覆、梯廳走道至家門口動線保護（ 防潮布、瓦楞板、木夾板三層防護 ）。</p>
-                    <p>• 保護工程施作前，請統包會同大樓總幹事，將電梯內外、梯廳、…等公共動線進行錄影 ( 拍照 ) 存證。</p>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/70 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                    <ul class="list-disc pl-5 space-y-1.5">
+                        <li>電梯車廂內部包覆、梯廳走道至家門口動線保護（ 防潮布、瓦楞板、木夾板三層防護 ）。</li>
+                        <li>保護工程施作前，請統包會同大樓總幹事，將電梯內外、梯廳、…等公共動線進行錄影 ( 拍照 ) 存證。</li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- 2. 地板工程與拆除 -->
+            <!-- 2. 地板工程與拆除 (Standardized list indentation) -->
             <div class="space-y-2">
                 <h3 class="text-base font-bold text-slate-800 flex items-center">
                     <span class="w-6 h-6 rounded-full bg-indigo-600 text-white text-xs flex items-center justify-center mr-2 shrink-0">2</span>
                     地板工程與拆除
                 </h3>
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/70 text-xs sm:text-sm text-slate-700 leading-relaxed space-y-2">
-                    <p>• 陽台磁磚不動，其餘空間舊地磚拆除見底、重新做泥作水泥砂漿打底，抓平後再鋪貼 60 cm x 60 cm 國產防滑柔光面磁磚 ( 冠軍、白馬、馬可貝里 )。</p>
-                    <p>• 鋪貼時背滿漿/膠。磁磚四個角落與四條邊緣絕不能存在空鼓。乾區單片磁磚之總空鼓面積不得超過該片面積之 10%，且不合格片數不得超過乾區總鋪貼片數之 5%。</p>
-                    <p>• 磁磚貼完且水氣大致排出並充分硬化後，進行填縫 ( 填縫顏色與磁磚相近，但不要白色 )。</p>
-                    <p>• 玄關、客廳、三個房間的磁磚要連貫，非整片的磁磚不要貼於視覺主要區域 (如走道)。兒童房木地板拆除。</p>
-                    <p>• 磁磚防滑係數若採 C.S.R·B ( 赤腳防濕滑 ) 數值應達 0.50 含以上；若採 DIN 51130 則防滑等級應為 R10 含以上。</p>
-                    <p>• 主臥房上吊櫃拆除。</p>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/70 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>陽台磁磚不動，其餘空間舊地磚拆除見底、重新做泥作水泥砂漿打底，抓平後再鋪貼 60 cm x 60 cm 國產防滑柔光面磁磚 ( 冠軍、白馬、馬可貝里 )。</li>
+                        <li>鋪貼時背滿漿/膠。磁磚四個角落與四條邊緣絕不能存在空鼓。乾區單片磁磚之總空鼓面積不得超過該片面積之 10%，且不合格片數不得超過乾區總鋪貼片數之 5%。</li>
+                        <li>磁磚貼完且水氣大致排出並充分硬化後，進行填縫 ( 填縫顏色與磁磚相近，但不要白色 )。</li>
+                        <li>玄關、客廳、三個房間的磁磚要連貫，非整片的磁磚不要貼於視覺主要區域 (如走道)。兒童房木地板拆除。</li>
+                        <li>磁磚防滑係數若採 C.S.R·B ( 赤腳防濕滑 ) 數值應達 0.50 含以上；若採 DIN 51130 則防滑等級應為 R10 含以上。</li>
+                        <li>主臥房上吊櫃拆除。</li>
+                    </ul>
                 </div>
             </div>
 
@@ -264,7 +256,7 @@
                     <ul class="list-disc pl-5 space-y-2 leading-relaxed">
                         <li>全室線路更新 (太平洋電線電纜 2.0 mm、3.5 mm²、5.5 mm² 電線)、總開關使用 士林電機 NFB，其餘所有分路皆使用士林電機 NVB-50UL ( 漏電感度使用 30mA 的；漏電/過負載/短路保護 )、開關與插座使用國際牌星光系列、5.5 mm² 的插座使用國際牌星光的系列 WNF155236W ( 附門 )。 新增的插座使用單聯金屬埋入式接線盒 ( 視狀況使用加深的 )。</li>
                         <li>更換全新符合現行法規之匯流排分電箱 ( 含安全封蓋板、一次側與二次側銅排、中性線與接地銅排 )。分電箱固定牢固，四周填補密實，不得有明顯孔洞與鬆動。分電箱中電線請使用合規的O型端子壓接 ( 單芯線可不壓接 )，並加上端子保護套。</li>
-                        <li>迴路共約 18 條 ( 含總開關共 26P，但分電箱至少需額外預留 4P 未使用供未來擴充 )、插座及開關共約 51 處，詳細資訊請見<a href="we.html" target="_blank" class="attachment-link"><i class="fa-solid fa-paperclip text-[11px]"></i>附件<i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-75"></i></a>，指定的位置是否適合開孔開槽依師傅專業判斷，若附件標示的指定位置不建議開孔槽則請通知業主 )。L1 和 L2 兩條火線負載總電流盡量平衡。</li>
+                        <li>迴路共約 18 條 ( 含總開關共 26P，但分電箱至少需額外預留 4P 未使用供未來擴充 )、插座及開關共約 51 處，詳細資訊請見<a href="we.html" target="_blank">附件</a>，指定的位置是否適合開孔開槽依師傅專業判斷，若附件標示的指定位置不建議開孔槽則請通知業主 )。L1 和 L2 兩條火線負載總電流盡量平衡。</li>
                         <li>3.5 mm² 及 5.5 mm² 的線路不經由插座上的孔做串接，請用合規的 WAGO 221 系列 快速接線端子做並接，剝線的長度需符合 WAGO、星光插座與開關之要求。線材不得在牆體/地板/天花板內做續接，以一條完整無中斷的線拉到目的地 ( 插座/開關 )。絞線不得剪斷線股。火線、中性線、地線、控制線的線材顏色要依規定統一配置。</li>
                         <li>開關要拉中性線。若能安全且容易連接至大樓的接地，則所有插座要拉接地線；但無論是否有接地線，皆使用三孔附接地的插座 ( 不用兩孔的 )。</li>
                         <li>因使用士林電機 NVB-50UL，因此每個迴路皆需有各自獨立的中性線，不能跨接共用，亦不得直接自中性銅排取線。</li>
@@ -292,62 +284,73 @@
                     </ul>
                 </div>
 
-                <!-- 排水、地漏、瓦斯 -->
+                <!-- 排水、地漏、瓦斯 (Standardized list indentation) -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs sm:text-sm">
                     <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1.5">
                         <strong class="text-slate-900 block font-bold border-b pb-1">排水：</strong>
-                        <p class="text-slate-700 leading-relaxed">• 拆除時及拆除後，所有浴室、廚房及陽台之排水管口應立即以適當保護塞或保護蓋封閉，避免施工期間異物掉入管內造成阻塞，待安裝落水頭及排水測試前再行拆除；完工前再次確認排水暢通。</p>
-                        <p class="text-slate-700 leading-relaxed">• 全屋水泥打底與鋪設新地板前，需先檢查舊有排水管（ 浴室、廚房、陽台 ）確認是否完全順暢。</p>
+                        <ul class="list-disc pl-4 space-y-1.5 text-slate-700 leading-relaxed">
+                            <li>拆除時及拆除後，所有浴室、廚房及陽台之排水管口應立即以適當保護塞或保護蓋封閉，避免施工期間異物掉入管內造成阻塞，待安裝落水頭及排水測試前再行拆除；完工前再次確認排水暢通。</li>
+                            <li>全屋水泥打底與鋪設新地板前，需先檢查舊有排水管（ 浴室、廚房、陽台 ）確認是否完全順暢。</li>
+                        </ul>
                     </div>
                     <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1.5">
                         <strong class="text-slate-900 block font-bold border-b pb-1">地漏：</strong>
-                        <p class="text-slate-700 leading-relaxed">• 浴室使用防臭地漏。</p>
-                        <p class="text-slate-700 leading-relaxed">• 廚房原本地板走中間的地漏，改成用 “預留排水口” 暫時性封閉 ( 密閉式面蓋 )。</p>
+                        <ul class="list-disc pl-4 space-y-1.5 text-slate-700 leading-relaxed">
+                            <li>浴室使用防臭地漏。</li>
+                            <li>廚房原本地板走中間的地漏，改成用 “預留排水口” 暫時性封閉 ( 密閉式面蓋 )。</li>
+                        </ul>
                     </div>
                     <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1.5">
                         <strong class="text-slate-900 block font-bold border-b pb-1">瓦斯：</strong>
-                        <p class="text-slate-700 leading-relaxed">• 待與統包確認瓦斯管線的處理方式。</p>
-                        <p class="text-slate-700 leading-relaxed">• 完工後需確認瓦斯管線可正常使用並且無洩漏。</p>
+                        <ul class="list-disc pl-4 space-y-1.5 text-slate-700 leading-relaxed">
+                            <li>待與統包確認瓦斯管線的處理方式。</li>
+                            <li>完工後需確認瓦斯管線可正常使用並且無洩漏。</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- 4. 弱電 -->
+            <!-- 4. 弱電 (Standardized list indentation) -->
             <div class="space-y-2">
                 <h3 class="text-base font-bold text-slate-800 flex items-center">
                     <span class="w-6 h-6 rounded-full bg-indigo-600 text-white text-xs flex items-center justify-center mr-2 shrink-0">4</span>
                     弱電
                 </h3>
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/70 text-xs sm:text-sm text-slate-700 leading-relaxed space-y-1.5">
-                    <p>• 三間房間增加網路線槽搭配單聯埋入式加深接線盒 ( 詳細資訊請見<a href="we.html" target="_blank" class="attachment-link"><i class="fa-solid fa-paperclip text-[11px]"></i>附件<i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-75"></i></a> )，預拉二條 CAT.6 UTP ( 網路線材業主自備 ) 及一條尼龍拉線 ( 留水線 ) ，三個房間的接線盒出線預留至少 50 cm 裸線。</p>
-                    <p>• 所有網路線匯集至客廳電視牆面 ( 詳細資訊請見<a href="we.html" target="_blank" class="attachment-link"><i class="fa-solid fa-paperclip text-[11px]"></i>附件<i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-75"></i></a> )，從一個不銹鋼雙聯埋入式加深接線盒出線 ( 共 6 條網路線、3 條尼龍水線 )，出線的網路線預留至少 300cm 的裸線。</p>
-                    <p>• 先確認入戶電話線的源頭， 並將電話插座改到客廳電視牆面中間偏右 ( 詳細資訊請見<a href="we.html" target="_blank" class="attachment-link"><i class="fa-solid fa-paperclip text-[11px]"></i>附件<i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-75"></i></a> )。</p>
-                    <p>• 管線走 6 分 CD 管或 PVC 管，弱電管與強電 (110V/220V) 不塞同一條線管，弱電與強電之間要有間隔 ( 非垂直交錯時盡量間隔 6 cm 含以上 )。管路彎曲度及轉彎數應確保線材可抽換。</p>
-                    <p>• 電話線路若有動到插座與管線，則需測通。</p>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/70 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                    <ul class="list-disc pl-5 space-y-1.5">
+                        <li>三間房間增加網路線槽搭配單聯埋入式加深接線盒 ( 詳細資訊請見<a href="we.html" target="_blank">附件</a> )，預拉二條 CAT.6 UTP ( 網路線材業主自備 ) 及一條尼龍拉線 ( 留水線 ) ，三個房間的接線盒出線預留至少 50 cm 裸線。</li>
+                        <li>所有網路線匯集至客廳電視牆面 ( 詳細資訊請見<a href="we.html" target="_blank">附件</a> )，從一個不銹鋼雙聯埋入式加深接線盒出線 ( 共 6 條網路線、3 條尼龍水線 )，出線的網路線預留至少 300cm 的裸線。</li>
+                        <li>先確認入戶電話線的源頭， 並將電話插座改到客廳電視牆面中間偏右 ( 詳細資訊請見<a href="we.html" target="_blank">附件</a> )。</li>
+                        <li>管線走 6 分 CD 管或 PVC 管，弱電管與強電 (110V/220V) 不塞同一條線管，弱電與強電之間要有間隔 ( 非垂直交錯時盡量間隔 6 cm 含以上 )。管路彎曲度及轉彎數應確保線材可抽換。</li>
+                        <li>電話線路若有動到插座與管線，則需測通。</li>
+                    </ul>
                 </div>
             </div>
 
+            <!-- 5. 浴室翻新 (Standardized list indentation) -->
             <div class="space-y-3">
                 <h3 class="text-base font-bold text-slate-800 flex items-center">
                     <span class="w-6 h-6 rounded-full bg-indigo-600 text-white text-xs flex items-center justify-center mr-2 shrink-0">5</span>
                     浴室翻新
                 </h3>
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/70 text-xs sm:text-sm text-slate-700 leading-relaxed space-y-2">
-                    <p>• 舊有拆除見底、水泥砂漿打底、防水施作一底兩度高強度彈性水泥 (防水高度做到天花板吊頂高度，每道工序須完全乾透且採垂直與水平十字交叉法塗刷)、鋪貼壁磚與地磚。</p>
-                    <p>• 地面磁磚與牆面角落的磁磚皆不能有空鼓狀況。</p>
-                    <p>• 浴室門與框換新 ( 大約 75cm寬 x 200cm 高 )： 使用塑鋼門，門框採溼式施工 ( 傳統前置門框 )。</p>
-                    <p>• 天花板換新 ( 日本麗仕 矽酸鈣板+接縫 AB 膠+防潮批土+封閉底漆+2道防水/防霉面漆 )、預留維修孔、暖風機孔尺寸為 30x30cm 需吊筋及角材之類的材料加強承重與鎖固；浴室上方有梁柱，因此暖風機位置需注意上方是否有足夠空間放暖風機及過風管；維修孔位置需注意是否有空間更換設備、開關入水閥。</p>
-                    <p>• 使用國產磁磚 ( 冠軍、白馬、馬可貝里 )，牆面用 30cm x 60cm 磁磚、地磚用 30 cm x 30 cm 防滑磁磚 ( 防滑係數若採 C.S.R·B 赤腳防濕滑 則數值應達 0.60 含以上 )。</p>
-                    <p>• 浴室全區地板、所有的結構與易漏水交界處 ( 含地壁接縫、陰陽角、管線周圍、落水頭、門檻止水墩周邊 ) 皆須鋪貼做防水防裂用的六角網/玻纖網/不織布之類的材料進行加強。網材施作時須確實以防水漆 ( 彈性水泥 ) 刷平壓實並完全包覆於塗層中，網材不可浮起、產生皺褶或空鼓脫層。</p>
-                    <p>• 舊有的防水層要去除乾淨。貼磁磚時牆面與地面的磁磚縫要對齊。浴室門檻止水墩下面多刷一層防水。</p>
-                    <p>• 門檻下方，用無收縮水泥灌一道高於室內地坪至少 1 ~ 2 cm 的泥作止水墩，防水層須包覆止水墩，再安裝門檻。</p>
-                    <p>• 貼磚前需先進行蓄水測試 ( 浸水測試 )，靜置至少 48 小時。</p>
-                    <p>• 牆壁磁磚陽角使用鋁製/不銹鋼製小圓角收邊條。</p>
-                    <p>• 洩水坡度： 施作連續洩水坡度，淋浴區 1~1.5% 坡度，馬桶及門口區域為 1% 坡度。</p>
-                    <p>• 淋浴區冷熱水出水口，使用龍頭水平定位器等工具進行固定，確保水平及中心距為標準 15 cm。貼磚完成後，管口不可凸出磁磚完成面，需平齊或內凹至多不可超過 5 mm。</p>
-                    <p>• 落水頭 ( 防臭地漏 )：蓋板也要方型的，不要傳統外方內圓的款式。 PVC 排水管於泥作打底前不得切齊樓板，應預留適當高度，防水層必須完整包覆管根及管外壁。PVC 排水管之預留高度應依所採用落水頭產品施工規範調整，使落水頭底座 ( 導水管 ) 可完全插入 PVC 排水管內，不得懸空或插入不足。落水頭周圍應以無收縮水泥或聚合物修補砂漿填實固定，防水層須與落水頭法蘭 ( 或底座 ) 形成連續完整之防水構造，避免積水滲入砂漿層造成側漏。</p>
-                    <p>• 管道間防臭封堵：浴室與管道間之牆上孔洞封填至上層樓板底 ( 使用防火發泡劑+矽酸鈣板之類的，不使用水泥與磚頭封死 )；增加一個硬質風管或套管以做為排風使用，周圍以防火發泡劑+矽酸鈣板之類的填塞，且風管或套管應微向下傾斜至管道間，室內端管子高於管道間，避免凝結水倒灌。</p>
-                    <p>• 浴室的牆面配水電管線時，原則上採直上直下，避免未來鑽破。</p>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/70 text-xs sm:text-sm text-slate-700 leading-relaxed space-y-3">
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>舊有拆除見底、水泥砂漿打底、防水施作一底兩度高強度彈性水泥 (防水高度做到天花板吊頂高度，每道工序須完全乾透且採垂直與水平十字交叉法塗刷)、鋪貼壁磚與地磚。</li>
+                        <li>地面磁磚與牆面角落的磁磚皆不能有空鼓狀況。</li>
+                        <li>浴室門與框換新 ( 大約 75cm寬 x 200cm 高 )： 使用塑鋼門，門框採溼式施工 ( 傳統前置門框 )。</li>
+                        <li>天花板換新 ( 日本麗仕 矽酸鈣板+接縫 AB 膠+防潮批土+封閉底漆+2道防水/防霉面漆 )、預留維修孔、暖風機孔尺寸為 30x30cm 需吊筋及角材之類的材料加強承重與鎖固；浴室上方有梁柱，因此暖風機位置需注意上方是否有足夠空間放暖風機及過風管；維修孔位置需注意是否有空間更換設備、開關入水閥。</li>
+                        <li>使用國產磁磚 ( 冠軍、白馬、馬可貝里 )，牆面用 30cm x 60cm 磁磚、地磚用 30 cm x 30 cm 防滑磁磚 ( 防滑係數若採 C.S.R·B 赤腳防濕滑 則數值應達 0.60 含以上 )。</li>
+                        <li>浴室全區地板、所有的結構與易漏水交界處 ( 含地壁接縫、陰陽角、管線周圍、落水頭、門檻止水墩周邊 ) 皆須鋪貼做防水防裂用的六角網/玻纖網/不織布之類的材料進行加強。網材施作時須確實以防水漆 ( 彈性水泥 ) 刷平壓實並完全包覆於塗層中，網材不可浮起、產生皺褶或空鼓脫層。</li>
+                        <li>舊有的防水層要去除乾淨。貼磁磚時牆面與地面的磁磚縫要對齊。浴室門檻止水墩下面多刷一層防水。</li>
+                        <li>門檻下方，用無收縮水泥灌一道高於室內地坪至少 1 ~ 2 cm 的泥作止水墩，防水層須包覆止水墩，再安裝門檻。</li>
+                        <li>貼磚前需先進行蓄水測試 ( 浸水測試 )，靜置至少 48 小時。</li>
+                        <li>牆壁磁磚陽角使用鋁製/不銹鋼製小圓角收邊條。</li>
+                        <li>洩水坡度： 施作連續洩水坡度，淋浴區 1~1.5% 坡度，馬桶及門口區域為 1% 坡度。</li>
+                        <li>淋浴區冷熱水出水口，使用龍頭水平定位器等工具進行固定，確保水平及中心距為標準 15 cm。貼磚完成後，管口不可凸出磁磚完成面，需平齊或內凹至多不可超過 5 mm。</li>
+                        <li>落水頭 ( 防臭地漏 )：蓋板也要方型的，不要傳統外方內圓的款式。 PVC 排水管於泥作打底前不得切齊樓板，應預留適當高度，防水層必須完整包覆管根及管外壁。PVC 排水管之預留高度應依所採用落水頭產品施工規範調整，使落水頭底座 ( 導水管 ) 可完全插入 PVC 排水管內，不得懸空或插入不足。落水頭周圍應以無收縮水泥或聚合物修補砂漿填實固定，防水層須與落水頭法蘭 ( 或底座 ) 形成連續完整之防水構造，避免積水滲入砂漿層造成側漏。</li>
+                        <li>管道間防臭封堵：浴室與管道間之牆上孔洞封填至上層樓板底 ( 使用防火發泡劑+矽酸鈣板之類的，不使用水泥與磚頭封死 )；增加一個硬質風管或套管以做為排風使用，周圍以防火發泡劑+矽酸鈣板之類的填塞，且風管或套管應微向下傾斜至管道間，室內端管子高於管道間，避免凝結水倒灌。</li>
+                        <li>浴室的牆面配水電管線時，原則上採直上直下，避免未來鑽破。</li>
+                    </ul>
 
                     <!-- Sanitary Equipment Verbatim Breakdown -->
                     <div class="mt-4 p-3.5 bg-white rounded-lg border border-slate-200">
@@ -374,105 +377,121 @@
                 </div>
             </div>
 
-            <!-- 6. 窗戶 -->
+            <!-- 6. 窗戶 (Standardized list indentation) -->
             <div class="space-y-2">
                 <h3 class="text-base font-bold text-slate-800 flex items-center">
                     <span class="w-6 h-6 rounded-full bg-indigo-600 text-white text-xs flex items-center justify-center mr-2 shrink-0">6</span>
                     窗戶 ( 3房間窗 + 1 陽台窗 + 1 落地窗 + 1 浴室窗 + 2窗型冷氣孔 )
                 </h3>
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/70 text-xs sm:text-sm text-slate-700 leading-relaxed space-y-2">
-                    <p>• 除落地窗為溼式施工外，其餘舊窗皆採用乾式包框工法；鋁框內所有中空夾縫需灌入疏水型 PU 防水發泡劑或隔音棉等填滿。室外側的窗框與水泥或磁磚交接處需以耐候型矽利康密實填縫。</p>
-                    <p>• 橫拉窗皆使用正新門窗 ( 大和器系列 PL-892 / PL-192)。</p>
-                    <ul class="list-disc pl-5 space-y-1 text-slate-700">
-                        <li>主臥房橫拉窗 ( 約 203cm寬 x 126cm高 )： 5+5mm 膠合雙面強化玻璃。</li>
-                        <li>次臥房橫拉窗 ( 約 203cm寬 x 95cm高 )： 5+5mm 膠合雙面強化玻璃。</li>
-                        <li>小孩房橫拉窗 ( 約 159cm寬 x 132cm高 )： 5+5mm 膠合雙面強化玻璃。</li>
-                        <li>陽台橫拉窗 ( 約 171cm寬 x 97cm高 )： 4+4mm 膠合雙面強化玻璃。</li>
-                        <li>浴室橫拉窗 ( 約 99cm寬 x 73cm高 )： 4+4mm 膠合雙面強化玻璃 ( 半透明白膜 )。</li>
-                        <li>主臥原窗型冷氣孔 ( 約 60cm寬 x 55cm高 )： 改為橫拉窗，使用 5+5mm 膠合雙面強化玻璃。</li>
-                        <li>小孩房原窗型冷氣孔 ( 約 69cm寬 x 56cm高 )： 改為固定窗，使用 5+5mm 膠合雙面強化玻璃。</li>
-                        <li>落地橫拉窗 ( 約 118cm寬 x 208cm高 )： 4+4mm 膠合雙面強化玻璃，採溼式施工，降低一半之門檻高度，盡量不破壞陽台防水。</li>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/70 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>除落地窗為溼式施工外，其餘舊窗皆採用乾式包框工法；鋁框內所有中空夾縫需灌入疏水型 PU 防水發泡劑或隔音棉等填滿。室外側的窗框與水泥或磁磚交接處需以耐候型矽利康密實填縫。</li>
+                        <li>
+                            橫拉窗皆使用正新門窗 ( 大和器系列 PL-892 / PL-192)。
+                            <ul class="list-disc pl-5 mt-1.5 space-y-1 text-slate-700">
+                                <li>主臥房橫拉窗 ( 約 203cm寬 x 126cm高 )： 5+5mm 膠合雙面強化玻璃。</li>
+                                <li>次臥房橫拉窗 ( 約 203cm寬 x 95cm高 )： 5+5mm 膠合雙面強化玻璃。</li>
+                                <li>小孩房橫拉窗 ( 約 159cm寬 x 132cm高 )： 5+5mm 膠合雙面強化玻璃。</li>
+                                <li>陽台橫拉窗 ( 約 171cm寬 x 97cm高 )： 4+4mm 膠合雙面強化玻璃。</li>
+                                <li>浴室橫拉窗 ( 約 99cm寬 x 73cm高 )： 4+4mm 膠合雙面強化玻璃 ( 半透明白膜 )。</li>
+                                <li>主臥原窗型冷氣孔 ( 約 60cm寬 x 55cm高 )： 改為橫拉窗，使用 5+5mm 膠合雙面強化玻璃。</li>
+                                <li>小孩房原窗型冷氣孔 ( 約 69cm寬 x 56cm高 )： 改為固定窗，使用 5+5mm 膠合雙面強化玻璃。</li>
+                                <li>落地橫拉窗 ( 約 118cm寬 x 208cm高 )： 4+4mm 膠合雙面強化玻璃，採溼式施工，降低一半之門檻高度，盡量不破壞陽台防水。</li>
+                            </ul>
+                        </li>
+                        <li>窗戶需配合「冷氣室外機管線、排油煙機的排風管 ( 5.5 吋 )」以鋁製方管之類的材料 ( 不要用塑鋁板那類輕薄易損壞的 )，預先開孔供管線穿過。</li>
+                        <li>包框前需檢查舊下框與牆體連結的固定力與整體結構承重，並做適當加強與固定。</li>
                     </ul>
-                    <p>• 窗戶需配合「冷氣室外機管線、排油煙機的排風管 ( 5.5 吋 )」以鋁製方管之類的材料 ( 不要用塑鋁板那類輕薄易損壞的 )，預先開孔供管線穿過。</p>
-                    <p>• 包框前需檢查舊下框與牆體連結的固定力與整體結構承重，並做適當加強與固定。</p>
                 </div>
             </div>
 
-            <!-- 7. 房間門換新 -->
+            <!-- 7. 房間門換新 (Standardized list indentation) -->
             <div class="space-y-2">
                 <h3 class="text-base font-bold text-slate-800 flex items-center">
                     <span class="w-6 h-6 rounded-full bg-indigo-600 text-white text-xs flex items-center justify-center mr-2 shrink-0">7</span>
                     房間門換新
                 </h3>
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/70 text-xs sm:text-sm text-slate-700 leading-relaxed space-y-1.5">
-                    <p>• 配合全室地板打除工程，拆除原有三個房間的舊門框與門片 ( 含外露的舊門框大約 90cm寬 x 200cm 高 )。</p>
-                    <p>• 後裝式門框 ( 乾式施工 )、門片使用實芯木門/實木複合門 ( 如「橙門」的 「實芯門-KD批批板系列」）、門板下方需內嵌自動升降防塵隔音條、門擋、鎖具 ( 優先使用靜音款 )。</p>
-                    <p>• 門框須安裝垂直方正，門片開關順暢，不得自行開啟或關閉，門縫均勻且不得明顯歪斜。灌漿或 PU 填縫須飽滿無空鼓。</p>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/70 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                    <ul class="list-disc pl-5 space-y-1.5">
+                        <li>配合全室地板打除工程，拆除原有三個房間的舊門框與門片 ( 含外露的舊門框大約 90cm寬 x 200cm 高 )。</li>
+                        <li>後裝式門框 ( 乾式施工 )、門片使用實芯木門/實木複合門 ( 如「橙門」的 「實芯門-KD批批板系列」）、門板下方需內嵌自動升降防塵隔音條、門擋、鎖具 ( 優先使用靜音款 )。</li>
+                        <li>門框須安裝垂直方正，門片開關順暢，不得自行開啟或關閉，門縫均勻且不得明顯歪斜。灌漿或 PU 填縫須飽滿無空鼓。</li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- 8. 油漆工程 -->
+            <!-- 8. 油漆工程 (Standardized list indentation) -->
             <div class="space-y-2">
                 <h3 class="text-base font-bold text-slate-800 flex items-center">
                     <span class="w-6 h-6 rounded-full bg-indigo-600 text-white text-xs flex items-center justify-center mr-2 shrink-0">8</span>
                     油漆工程
                 </h3>
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/70 text-xs sm:text-sm text-slate-700 leading-relaxed space-y-1.5">
-                    <p>• 全室牆面： 使用「立邦 淨味兒童漆」。</p>
-                    <p>• 全室天花板： 使用立邦的無毒乳膠漆（平光）。</p>
-                    <p>• 所有漆面先刷「得利 室內專用水性全效封閉底漆」後再刷兩道面漆。</p>
-                    <p>• 針對裂縫、廚房去除磁磚後之牆面、開孔、開槽處進行局部修補與基礎批土、打磨順平。</p>
-                    <p>• 全室不做傳統踢腳板油漆，牆面舊有的深色踢腳板油漆，先用封閉底漆阻絕後，再覆蓋至少三道牆面漆完全蓋掉。</p>
-                    <p>• 批土打磨及油漆前先卸除電燈、開關、插座、面板後再施作。</p>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/70 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                    <ul class="list-disc pl-5 space-y-1.5">
+                        <li>全室牆面： 使用「立邦 淨味兒童漆」。</li>
+                        <li>全室天花板： 使用立邦的無毒乳膠漆（平光）。</li>
+                        <li>所有漆面先刷「得利 室內專用水性全效封閉底漆」後再刷兩道面漆。</li>
+                        <li>針對裂縫、廚房去除磁磚後之牆面、開孔、開槽處進行局部修補與基礎批土、打磨順平。</li>
+                        <li>全室不做傳統踢腳板油漆，牆面舊有的深色踢腳板油漆，先用封閉底漆阻絕後，再覆蓋至少三道牆面漆完全蓋掉。</li>
+                        <li>批土打磨及油漆前先卸除電燈、開關、插座、面板後再施作。</li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- 9. 變頻空調 -->
+            <!-- 9. 變頻空調 (Standardized list indentation) -->
             <div class="space-y-2">
                 <h3 class="text-base font-bold text-slate-800 flex items-center">
                     <span class="w-6 h-6 rounded-full bg-indigo-600 text-white text-xs flex items-center justify-center mr-2 shrink-0">9</span>
                     變頻空調
                 </h3>
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/70 text-xs sm:text-sm text-slate-700 leading-relaxed space-y-2">
-                    <p>• 冷暖空調 3 台（ 三個房間 ）。</p>
-                    <p>• 室外機皆採304不鏽鋼壁掛架鎖於實心牆 ( 鑽孔處使用耐候矽利康防水 )，並須加裝減震橡膠墊，不要跟防盜鋁窗共振產生噪音。</p>
-                    <p>• 冷媒銅管保溫材外層使用抗 UV 保溫膠布完整包覆；室外及室外冷媒管皆加裝冷氣修飾管、伸縮軟管。</p>
-                    <p>• 冷媒管的管徑與壁厚、控制訊號線、施工方式請依規範使用及施作。迴風空間依原廠規範。</p>
-                    <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm text-slate-700">
-                        <li>主臥： Panasonic UX頂級旗艦 3.6kW ( 室內機 CS-UX36FA2 + 室外機 CU-UX36FHA2 )。室外機壁掛在該房間窗戶外 ( 防盜鋁窗剪出適合室外機的大小就好，但要跟窗戶玻璃距離至少 15cm 含以上 )；或者放小孩房窗戶外。</li>
-                        <li>次臥： 日立 尊榮NTB 2.8 kW ( 室內機 RAS-28NTB + 室外機 RAC-28NP )。室外機壁掛在該房間窗戶外 ( 靠隔壁戶或靠近陽台，但要避免擋到防盜鋁窗上的門 )。</li>
-                        <li>小孩房： 日立 尊榮NTB 2.2 kW ( 室內機 RAS-22NTB + 室外機 RAC-22NP )。室外機壁掛在該房間窗戶外。</li>
-                        <li>客廳：先預留插座及排水，冷氣未來再裝。</li>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/70 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>冷暖空調 3 台（ 三個房間 ）。</li>
+                        <li>室外機皆採304不鏽鋼壁掛架鎖於實心牆 ( 鑽孔處使用耐候矽利康防水 )，並須加裝減震橡膠墊，不要跟防盜鋁窗共振產生噪音。</li>
+                        <li>冷媒銅管保溫材外層使用抗 UV 保溫膠布完整包覆；室外及室外冷媒管皆加裝冷氣修飾管、伸縮軟管。</li>
+                        <li>
+                            冷媒管的管徑與壁厚、控制訊號線、施工方式請依規範使用及施作。迴風空間依原廠規範。
+                            <ul class="list-disc pl-5 mt-1.5 space-y-1 text-xs sm:text-sm text-slate-700">
+                                <li>主臥： Panasonic UX頂級旗艦 3.6kW ( 室內機 CS-UX36FA2 + 室外機 CU-UX36FHA2 )。室外機壁掛在該房間窗戶外 ( 防盜鋁窗剪出適合室外機的大小就好，但要跟窗戶玻璃距離至少 15cm 含以上 )；或者放小孩房窗戶外。</li>
+                                <li>次臥： 日立 尊榮NTB 2.8 kW ( 室內機 RAS-28NTB + 室外機 RAC-28NP )。室外機壁掛在該房間窗戶外 ( 靠隔壁戶或靠近陽台，但要避免擋到防盜鋁窗上的門 )。</li>
+                                <li>小孩房： 日立 尊榮NTB 2.2 kW ( 室內機 RAS-22NTB + 室外機 RAC-22NP )。室外機壁掛在該房間窗戶外。</li>
+                                <li>客廳：先預留插座及排水，冷氣未來再裝。</li>
+                            </ul>
+                        </li>
+                        <li>會同冷氣廠商，先評估室內外機安裝位置、電源、冷媒管路線、排水路線 ( 打溝埋管、原大樓冷氣專用排水管 )。</li>
+                        <li>由統包協助 3 台舊窗型冷氣、1 台直立式洗衣機的清運，並提供廢四機回收聯單。</li>
                     </ul>
-                    <p>• 會同冷氣廠商，先評估室內外機安裝位置、電源、冷媒管路線、排水路線 ( 打溝埋管、原大樓冷氣專用排水管 )。</p>
-                    <p>• 由統包協助 3 台舊窗型冷氣、1 台直立式洗衣機的清運，並提供廢四機回收聯單。</p>
                 </div>
             </div>
 
-            <!-- 10. 廚房 -->
+            <!-- 10. 廚房 (Standardized list indentation) -->
             <div class="space-y-2">
                 <h3 class="text-base font-bold text-slate-800 flex items-center">
                     <span class="w-6 h-6 rounded-full bg-indigo-600 text-white text-xs flex items-center justify-center mr-2 shrink-0">10</span>
                     廚房
                 </h3>
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/70 text-xs sm:text-sm text-slate-700 leading-relaxed space-y-1.5">
-                    <p>• 排油煙機風管： 延伸至防盜鐵窗外，需有室外防雨罩，並於窗框開孔處附近安裝逆止風門。</p>
-                    <p>• 廚房區域需施作防水，防水做到磁磚完成地面向上至少 30cm，且牆角、管根、排水口、穿牆孔等處，須鋪貼做防水防裂用的六角網/玻纖網/不織布之類的材料進行加強。網材施作時須確實以防水漆 (彈性水泥) 刷平壓實並完全包覆於塗層中，網材不可浮起、產生皺褶或空鼓脫層。</p>
-                    <p>• 落水頭 ( 防臭地漏 )：同浴室翻新裡針對落水頭的需求。</p>
-                    <p>• 廚房上吊櫃拆除。</p>
-                    <p>• 牆面磁磚打除，並水泥粉光、批土後改上乳膠漆。</p>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/70 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                    <ul class="list-disc pl-5 space-y-1.5">
+                        <li>排油煙機風管： 延伸至防盜鐵窗外，需有室外防雨罩，並於窗框開孔處附近安裝逆止風門。</li>
+                        <li>廚房區域需施作防水，防水做到磁磚完成地面向上至少 30cm，且牆角、管根、排水口、穿牆孔等處，須鋪貼做防水防裂用的六角網/玻纖網/不織布之類的材料進行加強。網材施作時須確實以防水漆 (彈性水泥) 刷平壓實並完全包覆於塗層中，網材不可浮起、產生皺褶或空鼓脫層。</li>
+                        <li>落水頭 ( 防臭地漏 )：同浴室翻新裡針對落水頭的需求。</li>
+                        <li>廚房上吊櫃拆除。</li>
+                        <li>牆面磁磚打除，並水泥粉光、批土後改上乳膠漆。</li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- 11. 台中裝修許可評估、營建工程空氣污染防制費 -->
+            <!-- 11. 台中裝修許可評估、營建工程空氣污染防制費 (Standardized list indentation) -->
             <div class="space-y-2">
                 <h3 class="text-base font-bold text-slate-800 flex items-center">
                     <span class="w-6 h-6 rounded-full bg-indigo-600 text-white text-xs flex items-center justify-center mr-2 shrink-0">11</span>
                     台中裝修許可評估、營建工程空氣污染防制費
                 </h3>
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/70 text-xs sm:text-sm text-slate-700 leading-relaxed space-y-1.5">
-                    <p>• 本工程是否須辦理室內裝修許可，應依《建築物室內裝修管理辦法》及台中市政府都市發展局相關規定，由統包於施工前確認並告知業主。若依法須申請，應委託具備資格之建築師或合法室內裝修業者辦理，並依規定完成施工前申請及完工後相關程序。若須辦理，應於報價中載明相關費用。</p>
-                    <p>• 統包應確認本工程是否須申報營建工程空氣污染防制費。若須申報，應於報價中載明相關費用。</p>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/70 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                    <ul class="list-disc pl-5 space-y-1.5">
+                        <li>本工程是否須辦理室內裝修許可，應依《建築物室內裝修管理辦法》及台中市政府都市發展局相關規定，由統包於施工前確認並告知業主。若依法須申請，應委託具備資格之建築師或合法室內裝修業者辦理，並依規定完成施工前申請及完工後相關程序。若須辦理，應於報價中載明相關費用。</li>
+                        <li>統包應確認本工程是否須申報營建工程空氣污染防制費。若須申報，應於報價中載明相關費用。</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -548,7 +567,6 @@
         </section>
 
         <footer class="mt-8 border-t border-slate-200 pt-6 text-center text-xs text-slate-500 space-y-2">
-            <p>© 2026 台中 19 坪電梯大樓翻修案 • 100% 原文對照說明書</p>
             <div class="no-print flex justify-center space-x-4 pt-1">
                 <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-indigo-600 hover:underline flex items-center">
                     <i class="fa-solid fa-arrow-up mr-1"></i> 回到頂部
@@ -558,5 +576,31 @@
 
     </main>
 
+    <!-- Font Scaling Functionality Script -->
+    <script>
+        let currentFontSizePercent = 100;
+        
+        function updateFontSizeDisplay() {
+            const htmlRoot = document.getElementById('html-root');
+            const fontBtn = document.getElementById('font-size-btn');
+            
+            if (htmlRoot) {
+                htmlRoot.style.fontSize = currentFontSizePercent + '%';
+            }
+            if (fontBtn) {
+                fontBtn.innerText = currentFontSizePercent + '%';
+            }
+        }
+
+        function changeFontSize(delta) {
+            currentFontSizePercent = Math.min(Math.max(currentFontSizePercent + delta * 10, 80), 140);
+            updateFontSizeDisplay();
+        }
+
+        function resetFontSize() {
+            currentFontSizePercent = 100;
+            updateFontSizeDisplay();
+        }
+    </script>
 </body>
 </html>
